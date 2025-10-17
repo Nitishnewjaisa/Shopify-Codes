@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Fit Check Comparison</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Segoe UI', 'Roboto', Arial, sans-serif;
+    }
+
+    .container {
+      display: flex;
+      flex-wrap: wrap;
+      width: 100%;
+    }
+
+    .half {
+      width: 50%;
+      padding: 30px;
+      position: relative;
+    }
+
+    .left {
+      background-color: #ffffff;
+    }
+
+    .right {
+      background-color: #00b5e2;
+      color: white;
+    }
+
+    .title-left {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+    }
+
+    .title-left h3 {
+      font-size: 100px;
+      color: #0d65b6;
+      font-weight: bold;
+    }
+
+    .title-left h4 {
+      font-size: 40px;
+      font-weight: bold;
+      line-height: 1.1;
+    }
+    
+    .title-right {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+    }
+
+    .title-right h3 {
+      font-size: 100px;
+      font-weight: bold;
+    }
+
+    .title-right p {
+      font-size: 20px;
+      line-height: 1.5;
+      font-weight: 600;
+    }
+
+    .subheading {
+      margin-top: 20px;
+      font-size: 24px;
+      font-weight: bold;
+      text-align: center;
+      margin-bottom: 30px;
+    }
+
+    .laptop-section {
+      position: relative;
+      height: 450px;
+    }
+
+    .main-laptop {
+      width: 280px;
+      height: auto;
+      position: absolute;
+      border-radius: 8px;
+    }
+
+    .laptop-1 { top: 20px; left: 30px; }
+    .laptop-2 { top: 20px; right: 30px; }
+    .laptop-3 { top: 200px; left: 50%; transform: translateX(-50%); }
+
+    /* =================================== */
+    /* --- CALLOUT STYLES --- */
+    /* =================================== */
+
+    .callout-group {
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .callout-group .circle {
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      border: 3px solid #0d65b6;
+      overflow: hidden;
+    }
+    
+    .right .callout-group .circle {
+        border-color: white;
+    }
+
+    .callout-group .circle img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .callout-group .line {
+      width: 3px;
+      height: 40px;
+      background-color: #28a745;
+    }
+
+    .callout-group .label {
+      font-size: 14px;
+      font-weight: bold;
+      color: #333;
+      background-color: #f0f0f0;
+      padding: 5px 10px;
+      border-radius: 5px;
+      white-space: nowrap;
+      margin-top: -1px;
+    }
+
+    .right .callout-group .label {
+      color: white;
+      background-color: rgba(255, 255, 255, 0.2);
+    }
+    
+    /* Positioning for each callout group */
+    /* Left Side */
+    .cg-1 { top: 30px; left: 150px; }
+    .cg-2 { top: 100px; left: 10px; }
+    .cg-3 { top: 30px; right: 150px; }
+    .cg-4 { top: 100px; right: 10px; }
+    .cg-5 { top: 280px; left: 150px; }
+
+    /* Right Side */
+    .right .cg-1 { top: 30px; left: 150px; }
+    .right .cg-2 { top: 100px; left: 10px; }
+    .right .cg-3 { top: 30px; right: 150px; }
+    .right .cg-4 { top: 100px; right: 10px; }
+    .right .cg-5 { top: 280px; left: 150px; }
+
+    /* =================================== */
+    /* --- MOBILE VIEW --- */
+    /* =================================== */
+    @media (max-width: 768px) {
+      .half {
+        width: 100%;
+        padding: 20px;
+      }
+
+      .title-left, .title-right {
+        justify-content: center;
+        text-align: center;
+        flex-direction: column;
+        gap: 10px;
+      }
+
+      .title-left h3, .title-right h3 { 
+        font-size: 60px; 
+        margin-bottom: 10px;
+      }
+      .title-left h4 { 
+        font-size: 28px; 
+        margin-bottom: 10px;
+      }
+      .title-right p { 
+        font-size: 16px;
+        margin-bottom: 10px;
+      }
+
+      .subheading {
+        font-size: 20px;
+        margin: 15px 0 20px 0;
+      }
+
+      .laptop-section {
+        height: 600px; /* Fixed height for mobile to accommodate callouts */
+        position: relative;
+      }
+      
+      .main-laptop {
+        width: 85%;
+        max-width: 250px;
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+      }
+
+      .laptop-1 { 
+        top: 20px; 
+      }
+      .laptop-2 { 
+        top: 150px; 
+      }
+      .laptop-3 { 
+        top: 280px; 
+      }
+      
+      /* Mobile callout positioning */
+      .callout-group {
+        display: flex; /* Show callouts on mobile */
+      }
+
+      .callout-group .circle {
+        width: 40px;
+        height: 40px;
+        border: 2px solid #0d65b6;
+      }
+
+      .right .callout-group .circle {
+        border-color: white;
+      }
+
+      .callout-group .line {
+        height: 25px;
+      }
+
+      .callout-group .label {
+        font-size: 10px;
+        padding: 3px 6px;
+        max-width: 80px;
+        text-align: center;
+        line-height: 1.2;
+      }
+
+      /* Mobile positioning for callouts */
+       .cg-1 { top: 60px; left: 20px; }
+      .cg-2 { top: 80px; left: 100px; }
+      .cg-3 { top: 206px; right: 146px; }
+      .cg-4 { top: 210px; right: 25px; }
+      .cg-5 { top: 340px; left: 50%; transform: translateX(-50%); }
+
+      .right .cg-1 { top: 60px; left: 20px; }
+      .right .cg-2 { top: 80px; left: 100px; }
+      .right .cg-3 { top: 206px; right: 146px; }
+      .right .cg-4 { top: 210px; right: 25px; }
+      .right .cg-5 { top: 340px; left: 50%; transform: translateX(-50%); }
+
+    }
+
+    /* Tablet view adjustments */
+    @media (max-width: 1024px) and (min-width: 769px) {
+      .title-left h3, .title-right h3 { 
+        font-size: 80px; 
+      }
+      .title-left h4 { 
+        font-size: 35px; 
+      }
+      .title-right p { 
+        font-size: 18px; 
+      }
+
+      .main-laptop {
+        width: 220px;
+      }
+
+      .callout-group .circle {
+        width: 50px;
+        height: 50px;
+      }
+
+      .callout-group .label {
+        font-size: 12px;
+        padding: 4px 8px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <!-- Left Section: Used Laptop -->
+    <div class="half left">
+      <div class="title-left">
+        <h3>#3</h3>
+        <h4>Fit <br>Check</h4>
+      </div>
+      <div class="subheading">Used Laptop</div>
+      
+      <div class="laptop-section">
+        <img src="Images/LaptopSideView.png" alt="Laptop 1" class="main-laptop laptop-1">
+        <img src="Images/LaptopSideView.png" alt="Laptop 2" class="main-laptop laptop-2">
+        <img src="Images/LaptopSideView.png" alt="Laptop 3" class="main-laptop laptop-3">
+        
+        <!-- Desktop Callout Groups -->
+        <div class="callout-group cg-1">
+          <div class="circle"><img src="Images/LaptopSideView.png" alt="Fitment Issue"></div>
+          <div class="line"></div>
+          <div class="label">Body Fitment Issue</div>
+        </div>
+        <div class="callout-group cg-2">
+            <div class="circle"><img src="Images/LaptopSideView.png" alt="Port Damage"></div>
+            <div class="line"></div>
+            <div class="label">Port Damage</div>
+        </div>
+        <div class="callout-group cg-3">
+            <div class="circle"><img src="Images/LaptopSideView.png" alt="Broken Vents"></div>
+            <div class="line"></div>
+            <div class="label">Broken Vents</div>
+        </div>
+         <div class="callout-group cg-4">
+            <div class="circle"><img src="Images/LaptopSideView.png" alt="Dusty Ports"></div>
+            <div class="line"></div>
+            <div class="label">Dusty Ports</div>
+        </div>
+         <div class="callout-group cg-5">
+            <div class="circle"><img src="Images/LaptopSideView.png" alt="Body Gap"></div>
+            <div class="line"></div>
+            <div class="label">Body Gap on Closing</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Right Section: Refurbished Laptop -->
+    <div class="half right">
+      <div class="title-right">
+        <h3>NO</h3>
+        <p>Body Gaps<br>Broken Locks<br>Broken Vents<br>Port Damages</p>
+      </div>
+      <div class="subheading">Refurbished Laptop</div>
+      
+      <div class="laptop-section">
+        <img src="Images/LaptopSideView.png" alt="Laptop 1" class="main-laptop laptop-1">
+        <img src="Images/LaptopSideView.png" alt="Laptop 2" class="main-laptop laptop-2">
+        <img src="Images/LaptopSideView.png" alt="Laptop 3" class="main-laptop laptop-3">
+        
+        <!-- Desktop Callout Groups -->
+        <div class="callout-group cg-1">
+          <div class="circle"><img src="Images/LaptopSideView.png" alt="No Fitment Issue"></div>
+          <div class="line"></div>
+          <div class="label">No Body Fitment Issue</div>
+        </div>
+        <div class="callout-group cg-2">
+            <div class="circle"><img src="Images/LaptopSideView.png" alt="No Port Damage"></div>
+            <div class="line"></div>
+            <div class="label">No Port Damage</div>
+        </div>
+        <div class="callout-group cg-3">
+            <div class="circle"><img src="Images/LaptopSideView.png" alt="No Broken Vents"></div>
+            <div class="line"></div>
+            <div class="label">No Broken Vents</div>
+        </div>
+         <div class="callout-group cg-4">
+            <div class="circle"><img src="Images/LaptopSideView.png" alt="No Dusty Ports"></div>
+            <div class="line"></div>
+            <div class="label">No Dusty Ports</div>
+        </div>
+         <div class="callout-group cg-5">
+            <div class="circle"><img src="Images/LaptopSideView.png" alt="No Body Gap"></div>
+            <div class="line"></div>
+            <div class="label">No Body Gap</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>
