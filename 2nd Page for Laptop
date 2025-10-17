@@ -1,0 +1,820 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .banner-portfolio {
+      background: linear-gradient(to right, #03B4D7, #0D77B6);
+      color: white;
+      padding: 60px 8%; 
+      position: relative;
+      overflow: hidden;
+    }
+
+    /* --- Top Subheading Section --- */
+    .subheading-portfolio {
+      display: flex;
+      justify-content: center;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+    .subheading-portfolio .title {
+      color: white;
+      text-align: center;
+      font-size: 70px;
+      margin: 0;
+    }
+    .subheading-portfolio .number-block .number {
+      font-size: 210px;
+      margin: 0;
+      font-weight: bold;
+      color: white;
+      line-height: 1;
+      position: relative;
+      top:-75px;
+      left:-55px;
+    }
+    .subheading-portfolio .number-block .number-text {
+      margin: 0; /* Resets default h3 margin */
+    }
+    .subheading-portfolio .number-block .number-text span {
+      font-size: 50px;
+      font-weight: 800;
+      color: white;
+      line-height: 1.2;
+      position: relative;
+      top:-195px;
+      left:65px;
+    }
+
+    /* --- Main Banner Content --- */
+    .banner-content-portfolio {
+      display: flex;
+      align-items: center;
+      justify-content: space-evenly;
+      gap: 20px;
+      max-height: 300px;
+      position: relative;
+      z-index: 2;
+    }
+    .banner-content-portfolio .highlight-text {
+      font-size: 50px;
+      color: white;
+      font-weight: bold;
+      line-height: 1.6;
+      margin-bottom: 80px;
+      text-decoration: underline;
+      text-decoration-color: #00ffcc;
+    }
+
+    /* --- Image and "New!" Text Section --- */
+    .image-container-portfolio {
+      width: 40%;
+      margin-left: 120px;
+      opacity: 0.9;
+      position: relative;
+    }
+    .image-container-portfolio .laptop-image {
+      width: 100%;
+      height: auto;
+      display: block;
+      position: relative;
+      top: -55px;
+      left: 15px;
+    }
+    .banner-text-large-portfolio {
+      font-size: 210px;
+      font-weight: bold;
+      position: absolute;
+      top: 45px;
+      left: 0;
+      margin-left: -135px;
+      z-index: 0;
+      width: 100%; /* Ensures text is contained for alignment */
+      text-align: center;
+    }
+    .banner-text-large-portfolio .char-2 { opacity: 0.6; }
+    .banner-text-large-portfolio .char-3 { opacity: 0.2; }
+
+    /* =================================== */
+    /* --- TABLET & MOBILE STYLES --- */
+    /* =================================== */
+    @media (max-width: 768px) {
+      .banner-portfolio {
+        padding: 60px 20px; /* Adjust padding for smaller screens */
+      }
+      .subheading-portfolio {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+      }
+      .subheading-portfolio .title {
+        font-size: 27px;
+      }
+      .subheading-portfolio .number-block .number {
+        font-size: 70px;
+      }
+      .subheading-portfolio .number-block .number-text span {
+        font-size: 25px;
+        top:-26px;
+        left:5px;
+      }
+      
+      .banner-content-portfolio {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        max-height: none; /* Remove height constraint */
+      }
+      .banner-content-portfolio .highlight-text {
+        font-size: 30px;
+        text-align: center;
+        margin-bottom:20px;
+      }
+
+      .image-container-portfolio {
+        width: 80%;
+        margin-left: 0;
+      }
+      
+      .banner-text-large-portfolio {
+        font-size: 70px;
+        /* The following rules perfectly center the text over the image */
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        margin-left: 0; /* Reset margin */
+      }
+    }
+
+    /* --- SMALL MOBILE STYLES --- */
+
+    @media (max-width: 480px) {
+      .subheading-portfolio .number-block {
+        position: relative; /* Context for absolute positioning of children */
+        width: 100%;
+        height: 100px; /* Give it some space */
+      }
+      .subheading-portfolio .number-block .number {
+        font-size: 60px;
+        position: absolute;
+        top: -30px;
+        left: 2%; /* Center relative to the container */
+        transform: translateX(-50%); /* Fine-tune centering */
+        width: 100%;
+      }
+      .subheading-portfolio .number-block .number-text {
+        font-size: 24px;
+        position: absolute;
+        top: 10px; /* Position below the number */
+        left: 0;
+        width: 100%;
+      }
+      
+      .banner-text-large-portfolio {
+        font-size: 60px;
+        top:90px;
+      }
+    }
+/* +++++++++++++++2nd Page Content for Laptop CSS+++++++++++++ */
+.portfolio-container {
+            display: flex;
+            height: 100vh;
+            overflow: hidden;
+        }
+
+        .portfolio-half {
+            width: 50%;
+            padding: 30px;
+            position: relative;
+            overflow: hidden;
+            box-sizing: border-box;
+        }
+
+        .portfolio-left {
+            background-color: #ffffff;
+        }
+
+        .portfolio-right {
+            background-color: #00b5e2;
+            color: white;
+        }
+
+        /* HEADERS */
+        .portfolio-header {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .portfolio-header .portfolio-number {
+            font-size: 170px;
+            font-weight: bold;
+        }
+
+        .portfolio-left .portfolio-number {
+            color: #0d65b6;
+        }
+
+        .portfolio-header .portfolio-title {
+            font-size: 46px;
+            font-weight: bold;
+            line-height: 1.1;
+        }
+
+        .portfolio-right .portfolio-issue-list {
+            font-size: 30px;
+            font-weight: 600;
+            line-height: 1.5;
+        }
+
+        /* SUBHEADINGS */
+        .portfolio-subheading {
+            font-size: 24px;
+            font-weight: bold;
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        /* IMAGE SECTION */
+        .portfolio-image-section {
+            position: relative;
+            text-align: center;
+            height: 350px;
+            overflow: visible;
+        }
+
+        .portfolio-main-image {
+            width: 100%;
+            max-width: 500px;
+            height: auto;
+            object-fit: contain;
+        }
+
+        /* CALLOUTS */
+        .portfolio-callout {
+            position: absolute;
+        }
+
+        .portfolio-callout .portfolio-circle {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            border: 3px solid #03B4D7;
+            background: transparent;
+            position: relative;
+        }
+
+        .portfolio-callout .portfolio-line {
+            position: absolute;
+            top: 23px;
+            height: 3px;
+            background-color: #03B4D7;
+        }
+
+        .portfolio-callout .portfolio-label {
+            position: absolute;
+            top: 8px;
+            font-size: 12px;
+            font-weight: bold;
+            padding: 5px 8px;
+            border-radius: 4px;
+            white-space: nowrap;
+            text-align: center;
+        }
+
+        /* LEFT SIDE - Lines extend left to white background */
+        .portfolio-left .portfolio-callout .portfolio-line {
+            right: 50px;
+            width: 135px;
+        }
+
+        .portfolio-left .portfolio-callout .portfolio-label {
+            background-color: #f0f0f0;
+            color: #333;
+            right: 105px;
+        }
+
+        /* RIGHT SIDE - Lines extend right to blue background */
+        .portfolio-right .portfolio-callout .portfolio-circle {
+            border-color: white;
+        }
+
+        .portfolio-right .portfolio-callout .portfolio-line {
+            left: 48px;
+            width: 150px;
+            background-color: white;
+        }
+
+        .portfolio-right .portfolio-callout .portfolio-label {
+            background-color: #0080c7;
+            color: white;
+            left: 105px;
+        }
+
+        /* DEFAULT CALLOUT POSITIONS (for unknown brands) */
+        .portfolio-c1 { top: 42%; left: 50%; }
+        .portfolio-c2 { top: 65%; left: 38%; }
+        .portfolio-c3 { top: 50%; left: 60%; }
+        .portfolio-c4 { top: 64%; left: 83%; }
+
+        .portfolio-c5 { top: 42%; right: 50%; }
+        .portfolio-c6 { top: 65%; right: 38%; }
+        .portfolio-c7 { top: 50%; right: 60%; }
+        .portfolio-c8 { top: 65%; right: 80%; }
+
+        /* BRAND-SPECIFIC POSITIONS */
+        
+        /* APPLE POSITIONS */
+        .brand-apple .portfolio-c1 { top: 35%; left: 45%; }
+        .brand-apple .portfolio-c2 { top: 70%; left: 32%; }
+        .brand-apple .portfolio-c3 { top: 55%; left: 65%; }
+        .brand-apple .portfolio-c4 { top: 70%; left: 85%; }
+
+        .brand-apple .portfolio-c5 { top: 35%; right: 45%; }
+        .brand-apple .portfolio-c6 { top: 70%; right: 32%; }
+        .brand-apple .portfolio-c7 { top: 55%; right: 65%; }
+        .brand-apple .portfolio-c8 { top: 70%; right: 85%; }
+
+        /* DELL POSITIONS */
+        .brand-dell .portfolio-c1 { top: 40%; left: 48%; }
+        .brand-dell .portfolio-c2 { top: 68%; left: 35%; }
+        .brand-dell .portfolio-c3 { top: 48%; left: 62%; }
+        .brand-dell .portfolio-c4 { top: 68%; left: 78%; }
+
+        .brand-dell .portfolio-c5 { top: 40%; right: 48%; }
+        .brand-dell .portfolio-c6 { top: 68%; right: 35%; }
+        .brand-dell .portfolio-c7 { top: 48%; right: 62%; }
+        .brand-dell .portfolio-c8 { top: 68%; right: 78%; }
+
+        /* HP POSITIONS */
+        .brand-hp .portfolio-c1 { top: 38%; left: 52%; }
+        .brand-hp .portfolio-c2 { top: 62%; left: 40%; }
+        .brand-hp .portfolio-c3 { top: 52%; left: 58%; }
+        .brand-hp .portfolio-c4 { top: 62%; left: 80%; }
+
+        .brand-hp .portfolio-c5 { top: 38%; right: 52%; }
+        .brand-hp .portfolio-c6 { top: 62%; right: 40%; }
+        .brand-hp .portfolio-c7 { top: 52%; right: 58%; }
+        .brand-hp .portfolio-c8 { top: 62%; right: 80%; }
+
+        /* LENOVO POSITIONS */
+        .brand-lenovo .portfolio-c1 { top: 44%; left: 47%; }
+        .brand-lenovo .portfolio-c2 { top: 67%; left: 36%; }
+        .brand-lenovo .portfolio-c3 { top: 47%; left: 63%; }
+        .brand-lenovo .portfolio-c4 { top: 67%; left: 82%; }
+
+        .brand-lenovo .portfolio-c5 { top: 44%; right: 47%; }
+        .brand-lenovo .portfolio-c6 { top: 67%; right: 36%; }
+        .brand-lenovo .portfolio-c7 { top: 47%; right: 63%; }
+        .brand-lenovo .portfolio-c8 { top: 67%; right: 82%; }
+
+        /* ASUS POSITIONS */
+        .brand-asus .portfolio-c1 { top: 36%; left: 49%; }
+        .brand-asus .portfolio-c2 { top: 64%; left: 33%; }
+        .brand-asus .portfolio-c3 { top: 49%; left: 61%; }
+        .brand-asus .portfolio-c4 { top: 64%; left: 84%; }
+
+        .brand-asus .portfolio-c5 { top: 36%; right: 49%; }
+        .brand-asus .portfolio-c6 { top: 64%; right: 33%; }
+        .brand-asus .portfolio-c7 { top: 49%; right: 61%; }
+        .brand-asus .portfolio-c8 { top: 64%; right: 84%; }
+
+        /* MOBILE STYLES */
+        @media (max-width: 768px) {
+            body {
+                overflow-x: auto;
+            }
+            
+            .portfolio-container {
+                flex-direction: column;
+                height: auto;
+                overflow: visible;
+            }
+
+            .portfolio-half {
+                width: 100%;
+                padding: 20px;
+            }
+
+            .portfolio-header {
+                justify-content: center;
+                text-align: center;
+                flex-direction: flex;
+                gap: 10px;
+            }
+
+            .portfolio-right .portfolio-header {
+                justify-content: center;
+            }
+
+            .portfolio-header .portfolio-number {
+                font-size: 60px;
+            }
+
+            .portfolio-header .portfolio-title {
+                font-size: 28px;
+            }
+
+            .portfolio-right .portfolio-issue-list {
+                font-size: 16px;
+            }
+
+            .portfolio-subheading {
+                font-size: 20px;
+                margin-bottom: 20px;
+            }
+
+            .portfolio-image-section {
+                height: 200px;
+            }
+
+            .portfolio-main-image {
+                max-width: 350px;
+            }
+
+            /* Mobile callout adjustments */
+            .portfolio-callout .portfolio-circle {
+                width: 25px;
+                height: 25px;
+                border-width: 2px;
+            }
+
+            .portfolio-callout .portfolio-line {
+                height: 2px;
+                top: 14px;
+            }
+
+            .portfolio-callout .portfolio-label {
+                font-size: 8px;
+                padding: 3px 6px;
+                line-height: 1.2;
+                top: 6px;
+            }
+
+            /* Mobile line lengths and positioning */
+            .portfolio-left .portfolio-callout .portfolio-line {
+                right: 27px;
+                width: 60px;
+            }
+
+            .portfolio-left .portfolio-callout .portfolio-label {
+                right: 50px;
+            }
+
+            .portfolio-right .portfolio-callout .portfolio-line {
+                left: 25px;
+                width: 36px;
+            }
+
+            .portfolio-right .portfolio-callout .portfolio-label {
+                left: 60px;
+            }
+
+            /* MOBILE BRAND-SPECIFIC POSITIONS */
+            
+            /* Default mobile positions */
+            .portfolio-c1 { top: 62%; left: 38%; }
+            .portfolio-c2 { top: 86%; left: 34%; }
+            .portfolio-c3 { top: 72%; left: 48%; }
+            .portfolio-c4 { top: 88%; left: 80%; }
+
+            .portfolio-c5 { top: 62%; right: 38%; }
+            .portfolio-c6 { top: 86%; right: 34%; }
+            .portfolio-c7 { top: 72%; right: 48%; }
+            .portfolio-c8 { top: 88%; right: 80%; }
+
+            /* Apple mobile positions */
+            .brand-apple .portfolio-c1 { top: 58%; left: 35%; }
+            .brand-apple .portfolio-c2 { top: 82%; left: 30%; }
+            .brand-apple .portfolio-c3 { top: 68%; left: 45%; }
+            .brand-apple .portfolio-c4 { top: 84%; left: 75%; }
+
+            .brand-apple .portfolio-c5 { top: 58%; right: 35%; }
+            .brand-apple .portfolio-c6 { top: 82%; right: 30%; }
+            .brand-apple .portfolio-c7 { top: 68%; right: 45%; }
+            .brand-apple .portfolio-c8 { top: 84%; right: 75%; }
+
+            /* Dell mobile positions */
+            .brand-dell .portfolio-c1 { top: 60%; left: 36%; }
+            .brand-dell .portfolio-c2 { top: 84%; left: 32%; }
+            .brand-dell .portfolio-c3 { top: 70%; left: 46%; }
+            .brand-dell .portfolio-c4 { top: 86%; left: 78%; }
+
+            .brand-dell .portfolio-c5 { top: 60%; right: 36%; }
+            .brand-dell .portfolio-c6 { top: 84%; right: 32%; }
+            .brand-dell .portfolio-c7 { top: 70%; right: 46%; }
+            .brand-dell .portfolio-c8 { top: 86%; right: 78%; }
+        }
+
+        /* Demo brand selector */
+        .brand-selector {
+            position: fixed;
+            top: 20px;
+            left: 20px;
+            z-index: 1000;
+            background: white;
+            padding: 10px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        .brand-selector select {
+            padding: 8px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+    </style>
+</head>
+<body>
+
+      <!--===================== 1st Page of A+---=================-->
+{% if product.type == "Laptops" %}
+  <div class="container-sm">
+    <section class="banner-portfolio">
+    <div class="subheading-portfolio">
+      <h2 class="title">REFURBISHED RIGHT</h2>
+      <div class="number-block">
+        <h1 class="number">4</h1>
+        <h3 class="number-text">
+          <span>Signs of a Laptop That’s Built to Last</span>
+        </h3>
+      </div>
+    </div>
+
+    <div class="banner-content-portfolio">
+      <div>
+        <p class="highlight-text">
+          <span>Looks Like</span><br>
+          <span>Feels like</span><br>
+          <span>Works Like</span>
+        </p>
+      </div>
+      <div class="image-container-portfolio">
+      <img src="{{ product.metafields.image['custom.image'] | image_url }}" alt="Laptop" class="laptop-image" />
+
+        <div class="banner-text-large-portfolio">
+          N<span class="char-2">e</span><span class="char-3">w!</span>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+
+      <!--=====================Start 2nd Page of A+---=================-->
+      
+    <div class="container-sm">
+  {% assign brand_name = product.vendor | downcase %}
+  <div class="portfolio-container brand-{{ brand_name }}">
+    <div class="portfolio-half portfolio-left">
+      <div class="portfolio-header">
+        <div class="portfolio-number">#2</div>
+        <div class="portfolio-title">Keyboard &<br>Trackpad</div>
+      </div>
+      <div class="portfolio-subheading">Used Laptop</div>
+      
+      <div class="portfolio-image-section">
+        {% if product.metafields.image-2['custom.images'] %}
+          <img src="{{ product.metafields.image-2['custom.images'] | image_url }}" alt="Used Laptop - Keyboard and Trackpad" class="portfolio-main-image" />
+        {% endif %}
+        
+        <div class="portfolio-callout portfolio-c1">
+          <div class="portfolio-circle"></div>
+          <div class="portfolio-line"></div>
+          <div class="portfolio-label">Letter Fading</div>
+        </div>
+        <div class="portfolio-callout portfolio-c2">
+          <div class="portfolio-circle"></div>
+          <div class="portfolio-line"></div>
+          <div class="portfolio-label">Blemished Trackpad</div>
+        </div>
+        <div class="portfolio-callout portfolio-c3">
+          <div class="portfolio-circle"></div>
+          <div class="portfolio-line"></div>
+          <div class="portfolio-label">Blemished Keyboard</div>
+        </div>
+        <div class="portfolio-callout portfolio-c4">
+          <div class="portfolio-circle"></div>
+          <div class="portfolio-line"></div>
+          <div class="portfolio-label">Used/Blemished Logos</div>
+        </div>
+      </div>
+    </div>
+    
+    <div class="portfolio-half portfolio-right">
+      <div class="portfolio-header">
+        <div class="portfolio-number">NO</div>
+        <div class="portfolio-issue-list">Blemish<br>Wear & Tear<br>Letter Fading</div>
+      </div>
+      <div class="portfolio-subheading">Refurbished Laptop</div>
+      
+      <div class="portfolio-image-section">
+        {% if product.metafields.image-2['custom.images'] %}
+          <img src="{{ product.metafields.image-2['custom.images'] | image_url }}" alt="Refurbished Laptop - Keyboard and Trackpad" class="portfolio-main-image" />
+        {% endif %}
+        
+        <div class="portfolio-callout portfolio-c5">
+          <div class="portfolio-circle"></div>
+          <div class="portfolio-line"></div>
+          <div class="portfolio-label">No Letter Fading</div>
+        </div>
+        <div class="portfolio-callout portfolio-c6">
+          <div class="portfolio-circle"></div>
+          <div class="portfolio-line"></div>
+          <div class="portfolio-label">No Blemished Trackpad</div>
+        </div>
+        <div class="portfolio-callout portfolio-c7">
+          <div class="portfolio-circle"></div>
+          <div class="portfolio-line"></div>
+          <div class="portfolio-label">No Blemished Keyboard</div>
+        </div>
+        <div class="portfolio-callout portfolio-c8">
+          <div class="portfolio-circle"></div>
+          <div class="portfolio-line"></div>
+          <div class="portfolio-label">Like-New Logos</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+    <!--=====================Start 3rd Page of A+---=================-->
+
+      <div class="container-sm">
+     <div class="portfolio-3-container">
+    <div class="portfolio-3-half portfolio-3-left">
+      <div class="portfolio-3-title-left">
+        <h3>#3</h3>
+        <h4>Fit <br>Check</h4>
+      </div>
+      <div class="portfolio-3-subheading">Used Laptop</div>
+      
+      <div class="portfolio-3-laptop-section">
+      <img src="{{ product.metafields.image-3['custom.images3'] | image_url }}" alt="Laptop" class="laptop-image" />
+      <img src="{{ product.metafields.image-3['custom.images3'] | image_url }}" alt="Laptop" class="laptop-image" />
+      <img src="{{ product.metafields.image-3['custom.images3'] | image_url }}" alt="Laptop" class="laptop-image" />
+        
+        <div class="portfolio-3-callout-group portfolio-3-cg-1">
+          <div class="portfolio-3-circle"></div>
+          <div class="portfolio-3-line"></div>
+          <div class="portfolio-3-label">Body Fitment Issue</div>
+        </div>
+        <div class="portfolio-3-callout-group portfolio-3-cg-2">
+            <div class="portfolio-3-circle"></div>
+            <div class="portfolio-3-line"></div>
+            <div class="portfolio-3-label">Port Damage</div>
+        </div>
+        <div class="portfolio-3-callout-group portfolio-3-cg-3">
+            <div class="portfolio-3-circle"></div>
+            <div class="portfolio-3-line"></div>
+            <div class="portfolio-3-label">Broken Vents</div>
+        </div>
+         <div class="portfolio-3-callout-group portfolio-3-cg-4">
+            <div class="portfolio-3-circle"></div>
+            <div class="portfolio-3-line"></div>
+            <div class="portfolio-3-label">Dusty Ports</div>
+        </div>
+         <div class="portfolio-3-callout-group portfolio-3-cg-5">
+            <div class="portfolio-3-circle"></div>
+            <div class="portfolio-3-line"></div>
+            <div class="portfolio-3-label">Body Gap on Closing</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="portfolio-3-half portfolio-3-right">
+      <div class="portfolio-3-title-right">
+        <h3>NO</h3>
+        <p>Body Gaps<br>Broken Locks<br>Broken Vents<br>Port Damages</p>
+      </div>
+      <div class="portfolio-3-subheading">Refurbished Laptop</div>
+      
+      <div class="portfolio-3-laptop-section">
+      <img src="{{ product.metafields.image-3['custom.images3'] | image_url }}" alt="Laptop" class="laptop-image" />
+      <img src="{{ product.metafields.image-3['custom.images3'] | image_url }}" alt="Laptop" class="laptop-image" />
+      <img src="{{ product.metafields.image-3['custom.images3'] | image_url }}" alt="Laptop" class="laptop-image" />
+        
+        <div class="portfolio-3-callout-group portfolio-3-cg-1">
+          <div class="portfolio-3-circle"></div>
+          <div class="portfolio-3-line"></div>
+          <div class="portfolio-3-label">No Body Fitment Issue</div>
+        </div>
+        <div class="portfolio-3-callout-group portfolio-3-cg-2">
+            <div class="portfolio-3-circle"></div>
+            <div class="portfolio-3-line"></div>
+            <div class="portfolio-3-label">No Port Damage</div>
+        </div>
+        <div class="portfolio-3-callout-group portfolio-3-cg-3">
+            <div class="portfolio-3-circle"></div>
+            <div class="portfolio-3-line"></div>
+            <div class="portfolio-3-label">No Broken Vents</div>
+        </div>
+         <div class="portfolio-3-callout-group portfolio-3-cg-4">
+            <div class="portfolio-3-circle"></div>
+            <div class="portfolio-3-line"></div>
+            <div class="portfolio-3-label">No Dusty Ports</div>
+        </div>
+         <div class="portfolio-3-callout-group portfolio-3-cg-5">
+            <div class="portfolio-3-circle"></div>
+            <div class="portfolio-3-line"></div>
+            <div class="portfolio-3-label">No Body Gap</div>
+        </div>
+      </div>
+    </div>
+  </div>
+ </div>
+
+        <!--=====================End 4th Page of A+---=================-->
+      <div class="container-sm">
+      <div class="AContent-wrapper">
+    <div class="AContent-container">
+      <!-- Left Section -->
+      <div class="AContent-half AContent-left">
+        <div class="AContent-title-left">
+          <div class="AContent-number">#4</div>
+          <div class="AContent-text">Flawless<br>Aesthetics</div>
+        </div>
+        <div class="AContent-subheading">Used Laptop</div>
+        
+        <div class="AContent-image-section">
+          <!-- Back View -->
+          <div class="AContent-image-container">
+                 <img src="{{ product.metafields.image-4['custom.images4'] | image_url }}" alt="Laptop" class="laptop-image" />
+
+            <div class="AContent-callout-group AContent-cg-1">
+              <div class="AContent-label">Missing Screws</div>
+              <div class="AContent-line"></div>
+              <div class="AContent-zoom-circle"></div>
+            </div>
+            <div class="AContent-callout-group AContent-cg-2">
+              <div class="AContent-label">Missing Bushes</div>
+              <div class="AContent-line"></div>
+              <div class="AContent-zoom-circle"></div>
+            </div>
+          </div>
+          <!-- Front View -->
+          <div class="AContent-image-container">
+      <img src="{{ product.metafields.image-4['custom.images4'] | image_url }}" alt="Laptop" class="laptop-image" />
+            <div class="AContent-callout-group AContent-cg-3">
+              <div class="AContent-label">Faded Logo</div>
+              <div class="AContent-line"></div>
+              <div class="AContent-zoom-circle"></div>
+            </div>
+            <div class="AContent-callout-group AContent-cg-4">
+              <div class="AContent-label">Scratches on Body</div>
+              <div class="AContent-line"></div>
+              <div class="AContent-zoom-circle"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Right Section -->
+      <div class="AContent-half AContent-right">
+        <div class="AContent-title-right">
+          <div class="AContent-no-text">NO</div>
+          <div class="AContent-list">Missing Screws<br>Scratches<br>Missing Bushes<br>Faded Logos or Stickers</div>
+        </div>
+        <div class="AContent-subheading">Refurbished Laptop</div>
+        
+        <div class="AContent-image-section">
+          <!-- Back View -->
+          <div class="AContent-image-container">
+      <img src="{{ product.metafields.image-4['custom.images4'] | image_url }}" alt="Laptop" class="laptop-image" />
+            <div class="AContent-callout-group AContent-cg-5">
+              <div class="AContent-zoom-circle"></div>
+              <div class="AContent-line"></div>
+              <div class="AContent-label">No Missing Screws</div>
+            </div>
+            <div class="AContent-callout-group AContent-cg-6">
+              <div class="AContent-zoom-circle"></div>
+              <div class="AContent-line"></div>
+              <div class="AContent-label">No Missing Bushes</div>
+            </div>
+          </div>
+          <!-- Front View -->
+          <div class="AContent-image-container">
+      <img src="{{ product.metafields.image-4['custom.images4'] | image_url }}" alt="Laptop" class="laptop-image" />
+            <div class="AContent-callout-group AContent-cg-7">
+              <div class="AContent-zoom-circle"></div>
+              <div class="AContent-line"></div>
+              <div class="AContent-label">No Faded Logo</div>
+            </div>
+            <div class="AContent-callout-group AContent-cg-8">
+              <div class="AContent-zoom-circle"></div>
+              <div class="AContent-line"></div>
+              <div class="AContent-label">No Scratches on Body</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div> 
+ </div>
+
+    
+</body>
+</html>
