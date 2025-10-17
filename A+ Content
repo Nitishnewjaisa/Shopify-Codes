@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+
+<style>
+.banner-portfolio {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        background: linear-gradient(to right, #03b4d7, #0d77b6);
+        color: white;
+        height: 100vh;
+        overflow: hidden;
+        padding: 6%;
+       margin:0px 72.5px
+      }
+
+      .subheading-portfolio {
+        display: flex;
+        justify-content: center;
+        gap: 10px;
+        align-items: center;
+        margin-bottom: 20px;
+      }
+
+      .subheading-portfolio h2 {
+        font-size: 210px;
+        line-height: 1;
+         top:130px;
+         left:-50px;
+      }
+
+      .refurb h1 {
+        font-size: 62px;
+        top: 90px;
+        left:-50px;
+      }
+
+      .refurb span {
+        font-size: 42px;
+        font-weight: 600;
+        top: 105px;
+        left:-30px;
+      }
+
+      .banner-content-portfolio {
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        flex: 1;
+        flex-wrap: wrap;
+      }
+
+      .banner-content-portfolio p {
+        font-size: 40px;
+        line-height: 1.3;
+        left:20px;
+        
+      }
+
+      .highlight-portfolio {
+        margin-bottom: 5px;
+      }
+
+      .bgimg-portfolio {
+        background-image: url("https://cdn.shopify.com/s/files/1/0571/1996/5366/files/Dell_5420_i5-removebg-preview.png?v=1749898809");
+        background-size: cover;
+        background-position: center;
+        width: 46%;
+        position: relative;
+        top: -40px;
+      }
+
+      .banner-text-large-portfolio {
+        padding: 100px 0px;
+        font-size: 180px;
+        font-weight: bold;
+        position: relative;
+        top: 40px;
+        left:-180px;
+        color: white;
+        text-align: center;
+      }
+
+  @media (max-width: 768px) {
+  .banner-portfolio{
+    margin:0px;
+  }
+  .subheading-portfolio {
+    text-align: center;
+  }
+  .subheading-portfolio h2 {
+    font-size: 70px;
+    top: 90px;
+    left: -8px;
+  }
+  .refurb h1 {
+    font-size: 27px;
+    left: -20px;
+  }
+  .refurb span {
+    font-size: 23px;
+    top: 95px;
+    left: -18.5px;
+  }
+  .banner-content-portfolio {
+    flex-direction: column;
+    margin-left: 0;
+  }
+  .banner-content-portfolio p {
+    font-size: 30px;
+    margin-bottom: 0px;
+    top: 110px;
+    left: 0px;
+  }
+  .bgimg-portfolio {
+    width: 100%;
+    margin-top: 90px;
+  }
+  .banner-text-large-portfolio {
+    font-size: 85px;
+    top: 40px;
+    right: 10px;
+    left: -3px;
+  }
+}
+
+@media (max-width: 768px) {
+  .banner-portfolio {
+    margin: 0px;
+  }
+  .subheading-portfolio {
+    text-align: center;
+  }
+  .subheading-portfolio h2 {
+    font-size: 70px;
+    top: 90px;
+    left: -8px;
+  }
+  .refurb h1 {
+    font-size: 27px;
+    left: -20px;
+  }
+  .refurb span {
+    font-size: 23px;
+    top: 95px;
+    left: -18.5px;
+  }
+  .banner-content-portfolio {
+    flex-direction: column;
+    margin-left: 0;
+  }
+  .banner-content-portfolio p {
+    font-size: 30px;
+    margin-bottom: 0px;
+    top: 110px;
+    left: 0px;
+  }
+  .bgimg-portfolio {
+    width: 100%;
+    margin-top: 90px;
+  }
+  .banner-text-large-portfolio {
+    font-size: 85px;
+    top: 40px;
+    left: -3px;
+  }
+}
+
+</style>
+
+</head>
+<body>
+
+  <!--Start of A+ Code  -->
+
+  <section class="banner-portfolio">
+      <div class="subheading-portfolio">
+        <h2 style=" position: relative; color:white; font-weight: bold;">4</h2>
+        <div class="refurb">
+          <h1 style=" position: relative; color:white;">REFURBISHED RIGHT</h1>
+          <span style=" position: relative;">Signs of a Laptop That’s Built to Last</span>
+        </div>
+      </div>
+
+      <div class="banner-content-portfolio">
+        <div>
+          <p style="color:white; position:relative;">
+            <span class="highlight-portfolio" style=" display: block; font-weight: bold; text-decoration: underline; text-decoration-color: #00ffcc;">Looks Like</span>
+            <span class="highlight-portfolio" style=" display: block; font-weight: bold; text-decoration: underline; text-decoration-color: #00ffcc;">Feels Like</span>
+            <span class="highlight-portfolio" style=" display: block; font-weight: bold; text-decoration: underline; text-decoration-color: #00ffcc;">Works Like</span>
+          </p>
+        </div>
+
+        <div class="bgimg-portfolio">
+          <div class="banner-text-large-portfolio">
+            N<span style="opacity: 0.7">e</span><span style="opacity: 0.3">w!</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  
+</body>
+</html>
