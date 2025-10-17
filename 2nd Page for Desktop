@@ -1,0 +1,630 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* +++++++++++++++2nd Page Content for Desktop CSS+++++++++++++ */
+
+.desktop-portfolio-container {
+  display: flex;
+  /* width: 100vw; */
+  height: 100vh;
+  overflow: hidden;
+}
+
+.desktop-portfolio-half {
+  width: 50%;
+  padding: 30px;
+  position: relative;
+  overflow: hidden;
+  box-sizing: border-box;
+}
+
+.desktop-portfolio-left {
+  background-color: #ffffff;
+}
+
+.desktop-portfolio-right {
+  background-color: #00b5e2;
+  color: white;
+}
+
+/* HEADERS */
+.desktop-portfolio-header {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.desktop-portfolio-header .desktop-portfolio-number {
+  font-size: 170px;
+  font-weight: bold;
+}
+
+.desktop-portfolio-left .desktop-portfolio-number {
+  color: #0d65b6;
+}
+
+.desktop-portfolio-header .desktop-portfolio-title {
+  font-size: 46px;
+  font-weight: bold;
+  line-height: 1.1;
+}
+
+.desktop-portfolio-right .desktop-portfolio-issue-list {
+  font-size: 30px;
+  font-weight: 600;
+  line-height: 1.5;
+}
+
+/* SUBHEADINGS */
+.desktop-portfolio-subheading {
+  font-size: 24px;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+/* IMAGE SECTION */
+.desktop-portfolio-image-section img{
+  position: relative;
+  text-align: center;
+  height: 350px;
+  overflow: visible;
+}
+
+.desktop-portfolio-main-image {
+  width: 100%;
+  max-width: 500px;
+  height: auto;
+  object-fit: contain;
+}
+
+/* CALLOUTS */
+.desktop-portfolio-callout {
+  position: absolute;
+}
+
+.desktop-portfolio-callout .desktop-portfolio-circle {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: 3px solid #03B4D7;
+  background: transparent;
+  position: relative;
+}
+
+.desktop-portfolio-callout .desktop-portfolio-line {
+  position: absolute;
+  top: 23px;
+  height: 3px;
+  background-color: #03B4D7;
+}
+
+.desktop-portfolio-callout .desktop-portfolio-label {
+  position: absolute;
+  top: 8px;
+  font-size: 12px;
+  font-weight: bold;
+  padding: 5px 8px;
+  border-radius: 4px;
+  white-space: nowrap;
+  text-align: center;
+}
+
+/* LEFT SIDE - Lines extend left to white background */
+.desktop-portfolio-left .desktop-portfolio-callout .desktop-portfolio-line {
+  right: 50px;
+  width: 135px;
+}
+
+.desktop-portfolio-left .desktop-portfolio-callout .desktop-portfolio-label {
+  background-color: #f0f0f0;
+  color: #333;
+  right: 105px;
+}
+
+/* RIGHT SIDE - Lines extend right to blue background */
+.desktop-portfolio-right .desktop-portfolio-callout .desktop-portfolio-circle {
+  border-color: white;
+}
+
+.desktop-portfolio-right .desktop-portfolio-callout .desktop-portfolio-line {
+  left: 48px;
+  width: 150px;
+  background-color: white;
+}
+
+.desktop-portfolio-right .desktop-portfolio-callout .desktop-portfolio-label {
+  background-color: #0080c7;
+  color: white;
+  left: 105px;
+}
+
+/* DEFAULT DESKTOP CALLOUT POSITIONS */
+.desktop-portfolio-c1 { top: 45%; left: 45%; }
+.desktop-portfolio-c2 { top: 70%; left: 42%; }
+.desktop-portfolio-c3 { top: 55%; left: 58%; }
+.desktop-portfolio-c4 { top: 75%; left: 75%; }
+
+.desktop-portfolio-c5 { top: 45%; right: 45%; }
+.desktop-portfolio-c6 { top: 70%; right: 42%; }
+.desktop-portfolio-c7 { top: 55%; right: 58%; }
+.desktop-portfolio-c8 { top: 75%; right: 75%; }
+
+/* DESKTOP BRAND SPECIFIC POSITIONS - HP */
+.brand-hp .desktop-portfolio-c1 { top: 42%; left: 43%; }
+.brand-hp .desktop-portfolio-c2 { top: 68%; left: 40%; }
+.brand-hp .desktop-portfolio-c3 { top: 52%; left: 56%; }
+.brand-hp .desktop-portfolio-c4 { top: 73%; left: 73%; }
+
+.brand-hp .desktop-portfolio-c5 { top: 42%; right: 43%; }
+.brand-hp .desktop-portfolio-c6 { top: 68%; right: 40%; }
+.brand-hp .desktop-portfolio-c7 { top: 52%; right: 56%; }
+.brand-hp .desktop-portfolio-c8 { top: 73%; right: 73%; }
+
+/* DESKTOP BRAND SPECIFIC POSITIONS - DELL */
+.brand-dell .desktop-portfolio-c1 { top: 44%; left: 44%; }
+.brand-dell .desktop-portfolio-c2 { top: 69%; left: 41%; }
+.brand-dell .desktop-portfolio-c3 { top: 54%; left: 57%; }
+.brand-dell .desktop-portfolio-c4 { top: 74%; left: 74%; }
+
+.brand-dell .desktop-portfolio-c5 { top: 44%; right: 44%; }
+.brand-dell .desktop-portfolio-c6 { top: 69%; right: 41%; }
+.brand-dell .desktop-portfolio-c7 { top: 54%; right: 57%; }
+.brand-dell .desktop-portfolio-c8 { top: 74%; right: 74%; }
+
+/* DESKTOP BRAND SPECIFIC POSITIONS - LENOVO */
+.brand-lenovo .desktop-portfolio-c1 { top: 43%; left: 46%; }
+.brand-lenovo .desktop-portfolio-c2 { top: 71%; left: 39%; }
+.brand-lenovo .desktop-portfolio-c3 { top: 56%; left: 59%; }
+.brand-lenovo .desktop-portfolio-c4 { top: 76%; left: 76%; }
+
+.brand-lenovo .desktop-portfolio-c5 { top: 43%; right: 46%; }
+.brand-lenovo .desktop-portfolio-c6 { top: 71%; right: 39%; }
+.brand-lenovo .desktop-portfolio-c7 { top: 56%; right: 59%; }
+.brand-lenovo .desktop-portfolio-c8 { top: 76%; right: 76%; }
+
+/* DESKTOP BRAND SPECIFIC POSITIONS - ACER */
+.brand-acer .desktop-portfolio-c1 { top: 46%; left: 42%; }
+.brand-acer .desktop-portfolio-c2 { top: 67%; left: 38%; }
+.brand-acer .desktop-portfolio-c3 { top: 53%; left: 55%; }
+.brand-acer .desktop-portfolio-c4 { top: 72%; left: 72%; }
+
+.brand-acer .desktop-portfolio-c5 { top: 46%; right: 42%; }
+.brand-acer .desktop-portfolio-c6 { top: 67%; right: 38%; }
+.brand-acer .desktop-portfolio-c7 { top: 53%; right: 55%; }
+.brand-acer .desktop-portfolio-c8 { top: 72%; right: 72%; }
+
+/* MOBILE STYLES */
+@media (max-width: 768px) {
+  body {
+    overflow-x: auto;
+  }
+  
+  .desktop-portfolio-container {
+    flex-direction: column;
+    height: auto;
+    /* width: 100vw; */
+    overflow: visible;
+  }
+
+  .desktop-portfolio-half {
+    width: 100%;
+    padding: 20px;
+  }
+
+  .desktop-portfolio-header {
+    justify-content: center;
+    text-align: center;
+    flex-direction: flex;
+    gap: 10px;
+  }
+
+  .desktop-portfolio-right .desktop-portfolio-header {
+    justify-content: center;
+  }
+
+  .desktop-portfolio-header .desktop-portfolio-number {
+    font-size: 60px;
+  }
+
+  .desktop-portfolio-header .desktop-portfolio-title {
+    font-size: 28px;
+  }
+
+  .desktop-portfolio-right .desktop-portfolio-issue-list {
+    font-size: 16px;
+  }
+
+  .desktop-portfolio-subheading {
+    font-size: 20px;
+    margin-bottom: 20px;
+  }
+
+  .desktop-portfolio-image-section img{
+    height: 200px;
+  }
+
+  .desktop-portfolio-main-image {
+    max-width: 350px;
+  }
+
+  /* Mobile callout adjustments */
+  .desktop-portfolio-callout .desktop-portfolio-circle {
+    width: 25px;
+    height: 25px;
+    border-width: 2px;
+  }
+
+  .desktop-portfolio-callout .desktop-portfolio-line {
+    height: 2px;
+    top: 14px;
+  }
+
+  .desktop-portfolio-callout .desktop-portfolio-label {
+    font-size: 8px;
+    padding: 3px 6px;
+    line-height: 1.2;
+    top: 6px;
+  }
+
+  /* Mobile line lengths and positioning */
+  .desktop-portfolio-left .desktop-portfolio-callout .desktop-portfolio-line {
+    right: 27px;
+    width: 60px;
+  }
+
+  .desktop-portfolio-left .desktop-portfolio-callout .desktop-portfolio-label {
+    right: 50px;
+  }
+
+  .desktop-portfolio-right .desktop-portfolio-callout .desktop-portfolio-line {
+    left: 25px;
+    width: 36px;
+  }
+
+  .desktop-portfolio-right .desktop-portfolio-callout .desktop-portfolio-label {
+    left: 60px;
+  }
+
+  /* Default Mobile positions */
+  .desktop-portfolio-c1 { top: 65%; left: 35%; }
+  .desktop-portfolio-c2 { top: 88%; left: 32%; }
+  .desktop-portfolio-c3 { top: 75%; left: 50%; }
+  .desktop-portfolio-c4 { top: 90%; left: 76%; } /* Fixed connection issue */
+
+  .desktop-portfolio-c5 { top: 65%; right: 35%; }
+  .desktop-portfolio-c6 { top: 88%; right: 32%; }
+  .desktop-portfolio-c7 { top: 75%; right: 50%; }
+  .desktop-portfolio-c8 { top: 90%; right: 76%; } /* Fixed connection issue */
+
+  /* MOBILE BRAND SPECIFIC POSITIONS - HP */
+  .brand-hp .desktop-portfolio-c1 { top: 60%; left: 38%; }
+  .brand-hp .desktop-portfolio-c2 { top: 85%; left: 35%; }
+  .brand-hp .desktop-portfolio-c3 { top: 72%; left: 52%; }
+  .brand-hp .desktop-portfolio-c4 { top: 88%; left: 73%; } /* Fixed connection */
+
+  .brand-hp .desktop-portfolio-c5 { top: 60%; right: 38%; }
+  .brand-hp .desktop-portfolio-c6 { top: 85%; right: 35%; }
+  .brand-hp .desktop-portfolio-c7 { top: 72%; right: 52%; }
+  .brand-hp .desktop-portfolio-c8 { top: 88%; right: 73%; } /* Fixed connection */
+
+  /* MOBILE BRAND SPECIFIC POSITIONS - DELL */
+  .brand-dell .desktop-portfolio-c1 { top: 63%; left: 36%; }
+  .brand-dell .desktop-portfolio-c2 { top: 86%; left: 33%; }
+  .brand-dell .desktop-portfolio-c3 { top: 74%; left: 51%; }
+  .brand-dell .desktop-portfolio-c4 { top: 89%; left: 74%; } /* Fixed connection */
+
+  .brand-dell .desktop-portfolio-c5 { top: 63%; right: 36%; }
+  .brand-dell .desktop-portfolio-c6 { top: 86%; right: 33%; }
+  .brand-dell .desktop-portfolio-c7 { top: 74%; right: 51%; }
+  .brand-dell .desktop-portfolio-c8 { top: 89%; right: 74%; } /* Fixed connection */
+
+  /* MOBILE BRAND SPECIFIC POSITIONS - LENOVO */
+  .brand-lenovo .desktop-portfolio-c1 { top: 62%; left: 37%; }
+  .brand-lenovo .desktop-portfolio-c2 { top: 87%; left: 30%; }
+  .brand-lenovo .desktop-portfolio-c3 { top: 76%; left: 53%; }
+  .brand-lenovo .desktop-portfolio-c4 { top: 91%; left: 75%; } /* Fixed connection */
+
+  .brand-lenovo .desktop-portfolio-c5 { top: 62%; right: 37%; }
+  .brand-lenovo .desktop-portfolio-c6 { top: 87%; right: 30%; }
+  .brand-lenovo .desktop-portfolio-c7 { top: 76%; right: 53%; }
+  .brand-lenovo .desktop-portfolio-c8 { top: 91%; right: 75%; } /* Fixed connection */
+
+  /* MOBILE BRAND SPECIFIC POSITIONS - ACER */
+  .brand-acer .desktop-portfolio-c1 { top: 64%; left: 34%; }
+  .brand-acer .desktop-portfolio-c2 { top: 84%; left: 31%; }
+  .brand-acer .desktop-portfolio-c3 { top: 73%; left: 49%; }
+  .brand-acer .desktop-portfolio-c4 { top: 87%; left: 72%; } /* Fixed connection */
+
+  .brand-acer .desktop-portfolio-c5 { top: 64%; right: 34%; }
+  .brand-acer .desktop-portfolio-c6 { top: 84%; right: 31%; }
+  .brand-acer .desktop-portfolio-c7 { top: 73%; right: 49%; }
+  .brand-acer .desktop-portfolio-c8 { top: 87%; right: 72%; } /* Fixed connection */
+}
+    </style>
+</head>
+<body>
+    {% comment %} Desktop {% endcomment %}
+
+ {% elsif product.type == "Desktops" %}
+
+ <div class="container-sm">
+
+    <section class="banner-portfolio">
+    <div class="subheading-portfolio">
+      <h2 class="title">REFURBISHED RIGHT</h2>
+      <div class="number-block">
+        <h1 class="number">4</h1>
+        <h3 class="number-text">
+          <span>Signs of a Laptop That’s Built to Last</span>
+        </h3>
+      </div>
+    </div>
+
+    <div class="banner-content-portfolio">
+      <div>
+        <p class="highlight-text">
+          <span>Looks Like</span><br>
+          <span>Feels like</span><br>
+          <span>Works Like</span>
+        </p>
+      </div>
+      <div class="image-container-portfolio">
+      <img src="{{ product.metafields.image['custom.image'] | image_url }}" alt="Laptop" class="laptop-image" />
+
+        <div class="banner-text-large-portfolio">
+          N<span class="char-2">e</span><span class="char-3">w!</span>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+
+      <!--=====================Start 2nd Page of A+---=================-->
+   <div class="container-sm">     
+  {% assign brand_name = product.vendor | downcase %}
+  <div class="desktop-portfolio-container brand-{{ brand_name }}">   
+    <div class="desktop-portfolio-half desktop-portfolio-left">     
+      <div class="desktop-portfolio-header">       
+        <div class="desktop-portfolio-number">#2</div>       
+        <div class="desktop-portfolio-title">CPU &<br> Performance</div>     
+      </div>     
+      <div class="desktop-portfolio-subheading">Used Desktop</div>          
+      <div class="desktop-portfolio-image-section">       
+        <img src="{{ product.metafields.image-2['custom.images'] | image_url }}" alt="Desktop" class="desktop-laptop-image" />              
+        <div class="desktop-portfolio-callout desktop-portfolio-c1">         
+          <div class="desktop-portfolio-circle"></div>         
+          <div class="desktop-portfolio-line"></div>         
+          <div class="desktop-portfolio-label">No LED Buttons Fine</div>       
+        </div>       
+        <div class="desktop-portfolio-callout desktop-portfolio-c2">         
+          <div class="desktop-portfolio-circle"></div>         
+          <div class="desktop-portfolio-line"></div>         
+          <div class="desktop-portfolio-label">No Damage/Crack Check</div>       
+        </div>       
+        <div class="desktop-portfolio-callout desktop-portfolio-c3">         
+          <div class="desktop-portfolio-circle"></div>         
+          <div class="desktop-portfolio-line"></div>         
+          <div class="desktop-portfolio-label">No Cabinet Body Checks</div>       
+        </div>       
+        <div class="desktop-portfolio-callout desktop-portfolio-c4">         
+          <div class="desktop-portfolio-circle"></div>         
+          <div class="desktop-portfolio-line"></div>         
+          <div class="desktop-portfolio-label">Used/Blemished Logos</div>       
+        </div>     
+      </div>   
+    </div>    
+    <div class="desktop-portfolio-half desktop-portfolio-right">     
+      <div class="desktop-portfolio-header">       
+        <div class="desktop-portfolio-number">NO</div>       
+        <div class="desktop-portfolio-issue-list">Blemish<br>Wear & Tear<br>Port Wear</div>     
+      </div>     
+      <div class="desktop-portfolio-subheading">Refurbished Desktop</div>          
+      <div class="desktop-portfolio-image-section">       
+        <img src="{{ product.metafields.image-2['custom.images'] | image_url }}" alt="Desktop" class="desktop-laptop-image" />              
+        <div class="desktop-portfolio-callout desktop-portfolio-c5">         
+          <div class="desktop-portfolio-circle"></div>         
+          <div class="desktop-portfolio-line"></div>         
+          <div class="desktop-portfolio-label">LED Buttons Fine</div>       
+        </div>       
+        <div class="desktop-portfolio-callout desktop-portfolio-c6">         
+          <div class="desktop-portfolio-circle"></div>         
+          <div class="desktop-portfolio-line"></div>         
+          <div class="desktop-portfolio-label">Damage/Crack Check</div>       
+        </div>       
+        <div class="desktop-portfolio-callout desktop-portfolio-c7">         
+          <div class="desktop-portfolio-circle"></div>         
+          <div class="desktop-portfolio-line"></div>         
+          <div class="desktop-portfolio-label">Cabinet Body Checks</div>       
+        </div>       
+        <div class="desktop-portfolio-callout desktop-portfolio-c8">         
+          <div class="desktop-portfolio-circle"></div>         
+          <div class="desktop-portfolio-line"></div>         
+          <div class="desktop-portfolio-label">Like-New Logos</div>       
+        </div>     
+      </div>   
+    </div> 
+  </div> 
+</div>
+
+    <!--=====================Start 3rd Page of A+---=================-->
+
+      <div class="container-sm">
+     <div class="portfolio-3-container">
+    <div class="portfolio-3-half portfolio-3-left">
+      <div class="portfolio-3-title-left">
+        <h3>#3</h3>
+        <h4>Fit <br>Check</h4>
+      </div>
+      <div class="portfolio-3-subheading">Used Desktop</div>
+      
+      <div class="portfolio-3-laptop-section">
+      <img src="{{ product.metafields.image-5['custom.images5'] | image_url }}" alt="Laptop" class="laptop-image" />
+      <img src="{{ product.metafields.image-5['custom.images5'] | image_url }}" alt="Laptop" class="laptop-image" />
+      <img src="{{ product.metafields.image-5['custom.images5'] | image_url }}" alt="Laptop" class="laptop-image" />
+        
+        <div class="portfolio-3-callout-group portfolio-3-cg-1">
+          <div class="portfolio-3-circle"></div>
+          <div class="portfolio-3-line"></div>
+          <div class="portfolio-3-label">Body Fitment Issue</div>
+        </div>
+        <div class="portfolio-3-callout-group portfolio-3-cg-2">
+            <div class="portfolio-3-circle"></div>
+            <div class="portfolio-3-line"></div>
+            <div class="portfolio-3-label">Port Damage</div>
+        </div>
+        <div class="portfolio-3-callout-group portfolio-3-cg-3">
+            <div class="portfolio-3-circle"></div>
+            <div class="portfolio-3-line"></div>
+            <div class="portfolio-3-label">Broken Vents</div>
+        </div>
+         <div class="portfolio-3-callout-group portfolio-3-cg-4">
+            <div class="portfolio-3-circle"></div>
+            <div class="portfolio-3-line"></div>
+            <div class="portfolio-3-label">Dusty Ports</div>
+        </div>
+         <div class="portfolio-3-callout-group portfolio-3-cg-5">
+            <div class="portfolio-3-circle"></div>
+            <div class="portfolio-3-line"></div>
+            <div class="portfolio-3-label">Body Gap on Closing</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="portfolio-3-half portfolio-3-right">
+      <div class="portfolio-3-title-right">
+        <h3>NO</h3>
+        <p>Body Gaps<br>Broken Locks<br>Broken Vents<br>Port Damages</p>
+      </div>
+      <div class="portfolio-3-subheading">Refurbished Desktop</div>
+      
+      <div class="portfolio-3-laptop-section">
+      <img src="{{ product.metafields.image-5['custom.images5'] | image_url }}" alt="Laptop" class="laptop-image" />
+      <img src="{{ product.metafields.image-5['custom.images5'] | image_url }}" alt="Laptop" class="laptop-image" />
+      <img src="{{ product.metafields.image-5['custom.images5'] | image_url }}" alt="Laptop" class="laptop-image" />
+        
+        <div class="portfolio-3-callout-group portfolio-3-cg-1">
+          <div class="portfolio-3-circle"></div>
+          <div class="portfolio-3-line"></div>
+          <div class="portfolio-3-label">No Body Fitment Issue</div>
+        </div>
+        <div class="portfolio-3-callout-group portfolio-3-cg-2">
+            <div class="portfolio-3-circle"></div>
+            <div class="portfolio-3-line"></div>
+            <div class="portfolio-3-label">No Port Damage</div>
+        </div>
+        <div class="portfolio-3-callout-group portfolio-3-cg-3">
+            <div class="portfolio-3-circle"></div>
+            <div class="portfolio-3-line"></div>
+            <div class="portfolio-3-label">No Broken Vents</div>
+        </div>
+         <div class="portfolio-3-callout-group portfolio-3-cg-4">
+            <div class="portfolio-3-circle"></div>
+            <div class="portfolio-3-line"></div>
+            <div class="portfolio-3-label">No Dusty Ports</div>
+        </div>
+         <div class="portfolio-3-callout-group portfolio-3-cg-5">
+            <div class="portfolio-3-circle"></div>
+            <div class="portfolio-3-line"></div>
+            <div class="portfolio-3-label">No Body Gap</div>
+        </div>
+      </div>
+    </div>
+  </div>
+ </div>
+
+        <!--=====================End 4th Page of A+---=================-->
+      <div class="container-sm">
+      <div class="AContent-wrapper">
+    <div class="AContent-container">
+      <!-- Left Section -->
+      <div class="AContent-half AContent-left">
+        <div class="AContent-title-left">
+          <div class="AContent-number">#4</div>
+          <div class="AContent-text">Flawless<br>Aesthetics</div>
+        </div>
+        <div class="AContent-subheading">Used Desktop</div>
+        
+        <div class="AContent-image-section">
+          <!-- Back View -->
+          <div class="AContent-image-container">
+      <img src="{{ product.metafields.image-3['custom.images3'] | image_url }}" alt="Laptop" class="laptop-image" />
+
+            <div class="AContent-callout-group AContent-cg-1">
+              <div class="AContent-label">Missing Screws</div>
+              <div class="AContent-line"></div>
+              <div class="AContent-zoom-circle"></div>
+            </div>
+            <div class="AContent-callout-group AContent-cg-2">
+              <div class="AContent-label">Missing Bushes</div>
+              <div class="AContent-line"></div>
+              <div class="AContent-zoom-circle"></div>
+            </div>
+          </div>
+          <!-- Front View -->
+          <div class="AContent-image-container">
+      <img src="{{ product.metafields.image-4['custom.images4'] | image_url }}" alt="Laptop" class="laptop-image" />
+            <div class="AContent-callout-group AContent-cg-3">
+              <div class="AContent-label">Faded Logo</div>
+              <div class="AContent-line"></div>
+              <div class="AContent-zoom-circle"></div>
+            </div>
+            <div class="AContent-callout-group AContent-cg-4">
+              <div class="AContent-label">Scratches on Body</div>
+              <div class="AContent-line"></div>
+              <div class="AContent-zoom-circle"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Right Section -->
+      <div class="AContent-half AContent-right">
+        <div class="AContent-title-right">
+          <div class="AContent-no-text">NO</div>
+          <div class="AContent-list">Missing Screws<br>Scratches<br>Missing Bushes<br>Faded Logos or Stickers</div>
+        </div>
+        <div class="AContent-subheading">Refurbished Desktop</div>
+        
+        <div class="AContent-image-section">
+          <!-- Back View -->
+          <div class="AContent-image-container">
+      <img src="{{ product.metafields.image-3['custom.images3'] | image_url }}" alt="Laptop" class="laptop-image" />
+            <div class="AContent-callout-group AContent-cg-5">
+              <div class="AContent-zoom-circle"></div>
+              <div class="AContent-line"></div>
+              <div class="AContent-label">No Missing Screws</div>
+            </div>
+            <div class="AContent-callout-group AContent-cg-6">
+              <div class="AContent-zoom-circle"></div>
+              <div class="AContent-line"></div>
+              <div class="AContent-label">No Missing Bushes</div>
+            </div>
+          </div>
+          <!-- Front View -->
+          <div class="AContent-image-container">
+      <img src="{{ product.metafields.image-4['custom.images4'] | image_url }}" alt="Laptop" class="laptop-image" />
+            <div class="AContent-callout-group AContent-cg-7">
+              <div class="AContent-zoom-circle"></div>
+              <div class="AContent-line"></div>
+              <div class="AContent-label">No Faded Logo</div>
+            </div>
+            <div class="AContent-callout-group AContent-cg-8">
+              <div class="AContent-zoom-circle"></div>
+              <div class="AContent-line"></div>
+              <div class="AContent-label">No Scratches on Body</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div> 
+ </div>
+
+    
+</body>
+</html>
