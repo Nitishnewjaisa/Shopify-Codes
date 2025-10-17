@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* MINI PC SPECIFIC STYLES */
+.mini-pc-portfolio-container {
+    display: flex;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.mini-pc-portfolio-half {
+    width: 50%;
+    padding: 30px;
+    position: relative;
+    overflow: hidden;
+    box-sizing: border-box;
+}
+
+.mini-pc-portfolio-left {
+    background-color: #ffffff;
+}
+
+.mini-pc-portfolio-right {
+    background-color: #00b5e2;
+    color: white;
+}
+
+/* HEADERS FOR MINI PC */
+.mini-pc-portfolio-header {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.mini-pc-portfolio-header .mini-pc-portfolio-number {
+    font-size: 170px;
+    font-weight: bold;
+}
+
+.mini-pc-portfolio-left .mini-pc-portfolio-number {
+    color: #0d65b6;
+}
+
+.mini-pc-portfolio-header .mini-pc-portfolio-title {
+    font-size: 46px;
+    font-weight: bold;
+    line-height: 1.1;
+}
+
+.mini-pc-portfolio-right .mini-pc-portfolio-issue-list {
+    font-size: 30px;
+    font-weight: 600;
+    line-height: 1.5;
+}
+
+/* SUBHEADINGS FOR MINI PC */
+.mini-pc-portfolio-subheading {
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+/* IMAGE SECTION FOR MINI PC */
+.mini-pc-portfolio-image-section {
+    position: relative;
+    text-align: center;
+    height: 350px;
+    overflow: visible;
+}
+
+.mini-pc-main-image {
+    width: 100%;
+    max-width: 300px; /* Smaller than laptops */
+    height: auto;
+    object-fit: contain;
+}
+
+/* CALLOUTS FOR MINI PC */
+.mini-pc-portfolio-callout {
+    position: absolute;
+}
+
+.mini-pc-portfolio-callout .mini-pc-portfolio-circle {
+    width: 40px; /* Smaller circles for mini PC */
+    height: 40px;
+    border-radius: 50%;
+    border: 3px solid #03B4D7;
+    background: transparent;
+    position: relative;
+}
+
+.mini-pc-portfolio-callout .mini-pc-portfolio-line {
+    position: absolute;
+    top: 18px; /* Adjusted for smaller circle */
+    height: 3px;
+    background-color: #03B4D7;
+}
+
+.mini-pc-portfolio-callout .mini-pc-portfolio-label {
+    position: absolute;
+    top: 6px; /* Adjusted for smaller circle */
+    font-size: 11px;
+    font-weight: bold;
+    padding: 4px 7px;
+    border-radius: 4px;
+    white-space: nowrap;
+    text-align: center;
+}
+
+/* LEFT SIDE - Lines extend left to white background */
+.mini-pc-portfolio-left .mini-pc-portfolio-callout .mini-pc-portfolio-line {
+    right: 40px;
+    width: 120px;
+}
+
+.mini-pc-portfolio-left .mini-pc-portfolio-callout .mini-pc-portfolio-label {
+    background-color: #f0f0f0;
+    color: #333;
+    right: 95px;
+}
+
+/* RIGHT SIDE - Lines extend right to blue background */
+.mini-pc-portfolio-right .mini-pc-portfolio-callout .mini-pc-portfolio-circle {
+    border-color: white;
+}
+
+.mini-pc-portfolio-right .mini-pc-portfolio-callout .mini-pc-portfolio-line {
+    left: 38px;
+    width: 135px;
+    background-color: white;
+}
+
+.mini-pc-portfolio-right .mini-pc-portfolio-callout .mini-pc-portfolio-label {
+    background-color: #0080c7;
+    color: white;
+    left: 95px;
+}
+
+/* DEFAULT MINI PC CALLOUT POSITIONS */
+.mini-pc-c1 { top: 25%; left: 35%; }
+.mini-pc-c2 { top: 45%; left: 25%; }
+.mini-pc-c3 { top: 65%; left: 35%; }
+.mini-pc-c4 { top: 80%; left: 50%; }
+
+.mini-pc-c5 { top: 25%; right: 35%; }
+.mini-pc-c6 { top: 45%; right: 25%; }
+.mini-pc-c7 { top: 65%; right: 35%; }
+.mini-pc-c8 { top: 80%; right: 50%; }
+
+/* BRAND-SPECIFIC POSITIONS FOR MINI PC */
+
+/* APPLE MINI PC POSITIONS */
+.mini-pc-brand-apple .mini-pc-c1 { top: 22%; left: 32%; }
+.mini-pc-brand-apple .mini-pc-c2 { top: 42%; left: 22%; }
+.mini-pc-brand-apple .mini-pc-c3 { top: 62%; left: 32%; }
+.mini-pc-brand-apple .mini-pc-c4 { top: 78%; left: 48%; }
+
+.mini-pc-brand-apple .mini-pc-c5 { top: 22%; right: 32%; }
+.mini-pc-brand-apple .mini-pc-c6 { top: 42%; right: 22%; }
+.mini-pc-brand-apple .mini-pc-c7 { top: 62%; right: 32%; }
+.mini-pc-brand-apple .mini-pc-c8 { top: 78%; right: 48%; }
+
+/* INTEL NUC MINI PC POSITIONS */
+.mini-pc-brand-intel .mini-pc-c1 { top: 20%; left: 30%; }
+.mini-pc-brand-intel .mini-pc-c2 { top: 40%; left: 20%; }
+.mini-pc-brand-intel .mini-pc-c3 { top: 60%; left: 30%; }
+.mini-pc-brand-intel .mini-pc-c4 { top: 75%; left: 45%; }
+
+.mini-pc-brand-intel .mini-pc-c5 { top: 20%; right: 30%; }
+.mini-pc-brand-intel .mini-pc-c6 { top: 40%; right: 20%; }
+.mini-pc-brand-intel .mini-pc-c7 { top: 60%; right: 30%; }
+.mini-pc-brand-intel .mini-pc-c8 { top: 75%; right: 45%; }
+
+/* HP MINI PC POSITIONS */
+.mini-pc-brand-hp .mini-pc-c1 { top: 28%; left: 38%; }
+.mini-pc-brand-hp .mini-pc-c2 { top: 48%; left: 28%; }
+.mini-pc-brand-hp .mini-pc-c3 { top: 68%; left: 38%; }
+.mini-pc-brand-hp .mini-pc-c4 { top: 82%; left: 52%; }
+
+.mini-pc-brand-hp .mini-pc-c5 { top: 28%; right: 38%; }
+.mini-pc-brand-hp .mini-pc-c6 { top: 48%; right: 28%; }
+.mini-pc-brand-hp .mini-pc-c7 { top: 68%; right: 38%; }
+.mini-pc-brand-hp .mini-pc-c8 { top: 82%; right: 52%; }
+
+/* DELL MINI PC POSITIONS */
+.mini-pc-brand-dell .mini-pc-c1 { top: 24%; left: 34%; }
+.mini-pc-brand-dell .mini-pc-c2 { top: 44%; left: 24%; }
+.mini-pc-brand-dell .mini-pc-c3 { top: 64%; left: 34%; }
+.mini-pc-brand-dell .mini-pc-c4 { top: 79%; left: 49%; }
+
+.mini-pc-brand-dell .mini-pc-c5 { top: 24%; right: 34%; }
+.mini-pc-brand-dell .mini-pc-c6 { top: 44%; right: 24%; }
+.mini-pc-brand-dell .mini-pc-c7 { top: 64%; right: 34%; }
+.mini-pc-brand-dell .mini-pc-c8 { top: 79%; right: 49%; }
+
+/* LENOVO MINI PC POSITIONS */
+.mini-pc-brand-lenovo .mini-pc-c1 { top: 26%; left: 36%; }
+.mini-pc-brand-lenovo .mini-pc-c2 { top: 46%; left: 26%; }
+.mini-pc-brand-lenovo .mini-pc-c3 { top: 66%; left: 36%; }
+.mini-pc-brand-lenovo .mini-pc-c4 { top: 81%; left: 51%; }
+
+.mini-pc-brand-lenovo .mini-pc-c5 { top: 26%; right: 36%; }
+.mini-pc-brand-lenovo .mini-pc-c6 { top: 46%; right: 26%; }
+.mini-pc-brand-lenovo .mini-pc-c7 { top: 66%; right: 36%; }
+.mini-pc-brand-lenovo .mini-pc-c8 { top: 81%; right: 51%; }
+
+/* MOBILE STYLES FOR MINI PC */
+@media (max-width: 768px) {
+    .mini-pc-portfolio-container {
+        flex-direction: column;
+        height: auto;
+        overflow: visible;
+    }
+
+    .mini-pc-portfolio-half {
+        width: 100%;
+        padding: 20px;
+    }
+
+    .mini-pc-portfolio-header {
+        justify-content: center;
+        text-align: center;
+        flex-direction: flex;
+        gap: 10px;
+    }
+
+    .mini-pc-portfolio-right .mini-pc-portfolio-header {
+        justify-content: center;
+    }
+
+    .mini-pc-portfolio-header .mini-pc-portfolio-number {
+        font-size: 60px;
+    }
+
+    .mini-pc-portfolio-header .mini-pc-portfolio-title {
+        font-size: 28px;
+    }
+
+    .mini-pc-portfolio-right .mini-pc-portfolio-issue-list {
+        font-size: 16px;
+    }
+
+    .mini-pc-portfolio-subheading {
+        font-size: 20px;
+        margin-bottom: 20px;
+    }
+
+    .mini-pc-portfolio-image-section {
+        height: 200px;
+    }
+
+    .mini-pc-main-image {
+        max-width: 250px; /* Even smaller on mobile */
+    }
+
+    /* Mobile callout adjustments for mini PC */
+    .mini-pc-portfolio-callout .mini-pc-portfolio-circle {
+        width: 20px;
+        height: 20px;
+        border-width: 2px;
+    }
+
+    .mini-pc-portfolio-callout .mini-pc-portfolio-line {
+        height: 2px;
+        top: 11px;
+    }
+
+    .mini-pc-portfolio-callout .mini-pc-portfolio-label {
+        font-size: 7px;
+        padding: 2px 4px;
+        line-height: 1.1;
+        top: 4px;
+    }
+
+    /* Mobile line lengths and positioning for mini PC */
+    .mini-pc-portfolio-left .mini-pc-portfolio-callout .mini-pc-portfolio-line {
+        right: 22px;
+        width: 45px;
+    }
+
+    .mini-pc-portfolio-left .mini-pc-portfolio-callout .mini-pc-portfolio-label {
+        right: 38px;
+    }
+
+    .mini-pc-portfolio-right .mini-pc-portfolio-callout .mini-pc-portfolio-line {
+        left: 20px;
+        width: 28px;
+    }
+
+    .mini-pc-portfolio-right .mini-pc-portfolio-callout .mini-pc-portfolio-label {
+        left: 48px;
+    }
+
+    /* MOBILE BRAND-SPECIFIC POSITIONS FOR MINI PC */
+    
+    /* Default mobile positions for mini PC */
+    .mini-pc-c1 { top: 45%; left: 25%; }
+    .mini-pc-c2 { top: 65%; left: 15%; }
+    .mini-pc-c3 { top: 80%; left: 25%; }
+    .mini-pc-c4 { top: 90%; left: 40%; }
+
+    .mini-pc-c5 { top: 45%; right: 25%; }
+    .mini-pc-c6 { top: 65%; right: 15%; }
+    .mini-pc-c7 { top: 80%; right: 25%; }
+    .mini-pc-c8 { top: 90%; right: 40%; }
+
+    /* Apple mobile positions for mini PC */
+    .mini-pc-brand-apple .mini-pc-c1 { top: 42%; left: 22%; }
+    .mini-pc-brand-apple .mini-pc-c2 { top: 62%; left: 12%; }
+    .mini-pc-brand-apple .mini-pc-c3 { top: 77%; left: 22%; }
+    .mini-pc-brand-apple .mini-pc-c4 { top: 87%; left: 37%; }
+
+    .mini-pc-brand-apple .mini-pc-c5 { top: 42%; right: 22%; }
+    .mini-pc-brand-apple .mini-pc-c6 { top: 62%; right: 12%; }
+    .mini-pc-brand-apple .mini-pc-c7 { top: 77%; right: 22%; }
+    .mini-pc-brand-apple .mini-pc-c8 { top: 87%; right: 37%; }
+
+    /* Intel mobile positions for mini PC */
+    .mini-pc-brand-intel .mini-pc-c1 { top: 40%; left: 20%; }
+    .mini-pc-brand-intel .mini-pc-c2 { top: 60%; left: 10%; }
+    .mini-pc-brand-intel .mini-pc-c3 { top: 75%; left: 20%; }
+    .mini-pc-brand-intel .mini-pc-c4 { top: 85%; left: 35%; }
+
+    .mini-pc-brand-intel .mini-pc-c5 { top: 40%; right: 20%; }
+    .mini-pc-brand-intel .mini-pc-c6 { top: 60%; right: 10%; }
+    .mini-pc-brand-intel .mini-pc-c7 { top: 75%; right: 20%; }
+    .mini-pc-brand-intel .mini-pc-c8 { top: 85%; right: 35%; }
+}
+    </style>
+</head>
+<body>
+
+    <div class="container-sm">
+  {% assign brand_name = product.vendor | downcase %}
+  <div class="mini-pc-portfolio-container mini-pc-brand-{{ brand_name }}">
+    <div class="mini-pc-portfolio-half mini-pc-portfolio-left">
+      <div class="mini-pc-portfolio-header">
+        <div class="mini-pc-portfolio-number">#2</div>
+        <div class="mini-pc-portfolio-title">Ports &<br>Connectivity</div>
+      </div>
+      <div class="mini-pc-portfolio-subheading">Used Mini PC</div>
+      
+      <div class="mini-pc-portfolio-image-section">
+        {% if product.metafields.image-2['custom.images'] %}
+          <img src="{{ product.metafields.image-2['custom.images'] | image_url }}" alt="Used Mini PC - Ports and Connectivity" class="mini-pc-main-image" />
+        {% endif %}
+        
+        <div class="mini-pc-portfolio-callout mini-pc-c1">
+          <div class="mini-pc-portfolio-circle"></div>
+          <div class="mini-pc-portfolio-line"></div>
+          <div class="mini-pc-portfolio-label">Scratched Ports</div>
+        </div>
+        <div class="mini-pc-portfolio-callout mini-pc-c2">
+          <div class="mini-pc-portfolio-circle"></div>
+          <div class="mini-pc-portfolio-line"></div>
+          <div class="mini-pc-portfolio-label">Worn USB Ports</div>
+        </div>
+        <div class="mini-pc-portfolio-callout mini-pc-c3">
+          <div class="mini-pc-portfolio-circle"></div>
+          <div class="mini-pc-portfolio-line"></div>
+          <div class="mini-pc-portfolio-label">Scuffed Body</div>
+        </div>
+        <div class="mini-pc-portfolio-callout mini-pc-c4">
+          <div class="mini-pc-portfolio-circle"></div>
+          <div class="mini-pc-portfolio-line"></div>
+          <div class="mini-pc-portfolio-label">Used/Faded Labels</div>
+        </div>
+      </div>
+    </div>
+    
+    <div class="mini-pc-portfolio-half mini-pc-portfolio-right">
+      <div class="mini-pc-portfolio-header">
+        <div class="mini-pc-portfolio-number">NO</div>
+        <div class="mini-pc-portfolio-issue-list">Scratches<br>Wear & Tear<br>Port Issues</div>
+      </div>
+      <div class="mini-pc-portfolio-subheading">Refurbished Mini PC</div>
+      
+      <div class="mini-pc-portfolio-image-section">
+        {% if product.metafields.image-2['custom.images'] %}
+          <img src="{{ product.metafields.image-2['custom.images'] | image_url }}" alt="Refurbished Mini PC - Ports and Connectivity" class="mini-pc-main-image" />
+        {% endif %}
+        
+        <div class="mini-pc-portfolio-callout mini-pc-c5">
+          <div class="mini-pc-portfolio-circle"></div>
+          <div class="mini-pc-portfolio-line"></div>
+          <div class="mini-pc-portfolio-label">Clean Ports</div>
+        </div>
+        <div class="mini-pc-portfolio-callout mini-pc-c6">
+          <div class="mini-pc-portfolio-circle"></div>
+          <div class="mini-pc-portfolio-line"></div>
+          <div class="mini-pc-portfolio-label">Perfect USB Ports</div>
+        </div>
+        <div class="mini-pc-portfolio-callout mini-pc-c7">
+          <div class="mini-pc-portfolio-circle"></div>
+          <div class="mini-pc-portfolio-line"></div>
+          <div class="mini-pc-portfolio-label">Like-New Body</div>
+        </div>
+        <div class="mini-pc-portfolio-callout mini-pc-c8">
+          <div class="mini-pc-portfolio-circle"></div>
+          <div class="mini-pc-portfolio-line"></div>
+          <div class="mini-pc-portfolio-label">Fresh Labels</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+</body>
+</html>
