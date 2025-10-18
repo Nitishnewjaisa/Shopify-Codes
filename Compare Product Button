@@ -1,0 +1,76 @@
+
+
+<!-- Claude AI Code is working  -->
+
+<div class="widget-item-toggle compare">        
+    <a target="_blank">       
+        <div class="compare-checkbox">               
+            <input                 
+                type="checkbox"                 
+                onClick="compareProducts(event);"                 
+                name="productCompare{{randomNumber}}"                 
+                id="productitem__compare-checkbox-{{ randomNumber }}"                 
+                class="js-compare-checkbox"                 
+                data-product-url="{{ product.url }}"                 
+                data-product-id="{{ product.id }}"                 
+                data-compare-checkbox               
+            >               
+            <label                 
+                class="compare-checkmark compare-label"                 
+                for="productitem__compare-checkbox-{{ randomNumber }}"                 
+                style="background-color:#0D77B6;"               
+            >                 
+                {{- 'onboarding.compare' | t -}}                 
+                <svg width="12" height="12" viewBox="0 0 18 16" fill="none" style="color:white !important;">                   
+                    <path d="M1 2.0764L3.66649 2.96528M3.66649 2.96528L1 10.9653C2.57548 12.1504 4.75856 12.1506 6.33404 10.9653L3.66649 2.96528ZM3.66649 2.96528L8.99948 1.1875M8.99948 1.1875L14.3325 2.96528M8.99948 1.1875V1.40973M8.99948 1.1875V15.4097M14.3325 2.96528L16.999 2.0764M14.3325 2.96528L11.6659 10.9653C13.2415 12.1504 15.4245 12.1506 17 10.9653L14.3325 2.96528ZM8.99948 15.4097H6.33298M8.99948 15.4097H11.6659" stroke="currentColor" stroke-width="1.15" stroke-linecap="round" stroke-linejoin="round"/>                 
+                </svg>               
+            </label>                            
+        </div>       
+    </a>      
+    <span class="widget-text-toggle" onclick="document.getElementById('productitem__compare-checkbox-{{ randomNumber }}').click();">Compare</span>       
+</div>
+
+ <!-- Compare Button in the first time old Main-->
+    <div class="widget-item-toggle compare" > 
+      <a target="_blank">
+      <div class="compare-checkbox">
+              <input
+                type="checkbox"
+                onClick="compareProducts(event);"
+                name="productCompare{{randomNumber}}"
+                id="productitem__compare-checkbox-{{ randomNumber }}"
+                class="js-compare-checkbox"
+                data-product-url="{{ product.url }}"
+                data-product-id="{{ product.id }}"
+                data-compare-checkbox
+              >
+              <label
+                class="compare-checkmark compare-label"
+                for="productitem__compare-checkbox-{{ randomNumber }}"
+                style="background-color:#0D77B6;"
+              >
+                {{- 'onboarding.compare' | t -}}
+                <svg width="12" height="12" viewBox="0 0 18 16" fill="none" style="color:white !important;">
+                  <path d="M1 2.0764L3.66649 2.96528M3.66649 2.96528L1 10.9653C2.57548 12.1504 4.75856 12.1506 6.33404 10.9653L3.66649 2.96528ZM3.66649 2.96528L8.99948 1.1875M8.99948 1.1875L14.3325 2.96528M8.99948 1.1875V1.40973M8.99948 1.1875V15.4097M14.3325 2.96528L16.999 2.0764M14.3325 2.96528L11.6659 10.9653C13.2415 12.1504 15.4245 12.1506 17 10.9653L14.3325 2.96528ZM8.99948 15.4097H6.33298M8.99948 15.4097H11.6659" stroke="currentColor" stroke-width="1.15" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </label>
+              
+            </div>
+      </a>
+     <span class="widget-text-toggle">Compare</span>  
+    </div>
+  </div>
+
+
+
+  <!-- Read More link -->
+    <a class="" href="https://newjaisa.com/pages/warranty-policy-1" 
+         style="display:inline-block; 
+          padding:8px 16px; 
+          margin-top:10px; 
+          background-color:#03B4D7; 
+          color:white; 
+          font-weight:bold; 
+          text-decoration:none; 
+          border-radius:6px;"
+        >Read More</a>
