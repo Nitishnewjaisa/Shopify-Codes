@@ -1,0 +1,16 @@
+[
+{"@type":"Question","name":" What exactly does “refurbished” mean for laptops?",
+"acceptedAnswer":{"@type":"Answer","text":"Refurbished laptops are pre-owned devices that have been professionally tested, cleaned, repaired (if needed), and restored to full working condition before resale."}},
+
+{"@type":"Question","name":"What are the key benefits of buying a refurbished laptop?",
+"acceptedAnswer":{"@type":"Answer","text":"You get high-performance machines at a fraction of the original cost—professionally inspected, certified, and often upgraded—making them an excellent value-for-money option."}},
+
+{"@type":"Question","name":"Are refurbished laptops reliable for long-term use?",
+"acceptedAnswer":{"@type":"Answer","text":"Yes! Since they undergo strict quality checks, refurbished laptops are built to perform reliably for years, much like brand-new systems."}},
+
+{"@type":"Question","name":"What’s the difference between used and refurbished laptops?",
+"acceptedAnswer":{"@type":"Answer","text":"Unlike second-hand or used laptops, refurbished ones are thoroughly tested, repaired, cleaned, and sold with a warranty—ensuring quality and accountability."}},
+
+{"@type":"Question","name":"Do refurbished laptops come with a warranty?",
+"acceptedAnswer":{"@type":"Answer","text":"Absolutely. Reputable sellers provide a warranty on all refurbished laptops, giving you peace of mind and protection after purchase."}}
+]
